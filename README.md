@@ -1,6 +1,6 @@
 # jax-latent-tes
 
-Differentiable 2D enthalpy–porosity solver with vorticity–stream-function Boussinesq Navier–Stokes, used to map dual-cycle latent-heat thermal energy storage architectures on $(\Lambda, \mathrm{Ra}_d)$.
+Differentiable 2D enthalpy–porosity solver with vorticity–stream-function Boussinesq Navier–Stokes, used to map dual-cycle latent-heat thermal energy storage architectures on $`(\Lambda, \mathrm{Ra}_d)`$.
 
 Installable package name: `pcm-map`. Command: `pcm`.
 
@@ -58,13 +58,13 @@ python -m pcm figures
 | Command | What it does |
 |---|---|
 | `validate` | Neumann / energy / gallium / adjoint checks → `results/validate.json` |
-| `sweep` | $(\Lambda, \mathrm{Ra}_d)$ architecture map → `results/sweep.json` |
+| `sweep` | $`(\Lambda, \mathrm{Ra}_d)`$ architecture map → `results/sweep.json` |
 | `baseline` | Equal-volume annulus and spokes vs cycle TO |
 | `explore` | Dual / Pareto / humidity / Stefan / COP variants at the conflict cell |
 | `numbers` | Copy JSON into `paper/generated_*.tex` |
 | `figures` | Rebuild `paper/figures/` from JSON (forward fields on stored winners) |
 
-`--ijhmt` sets $\mathrm{Fo}_d=1.2$, $\beta=2\to 8$, volume matching, two seeds, and energy CFL 8. `--grid-study` fills a $3\times 3$ subset at two meshes. `sweep` and `explore` are long topology-optimization runs. `numbers` only rereads JSON. `figures` rereads JSON and re-runs the forward solver on stored winner densities (cached in `results/winner_fields.npz`).
+`--ijhmt` sets $`\mathrm{Fo}_d=1.2`$, $`\beta=2\to 8`$, volume matching, two seeds, and energy CFL 8. `--grid-study` fills a $`3\times 3`$ subset at two meshes. `sweep` and `explore` are long topology-optimization runs. `numbers` only rereads JSON. `figures` rereads JSON and re-runs the forward solver on stored winner densities (cached in `results/winner_fields.npz`).
 
 See the [wiki command-line page](https://github.com/smyng91/jax-latent-tes/wiki/Command-line) for flags.
 
