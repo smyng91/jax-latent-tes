@@ -1,0 +1,27 @@
+[project]
+name = "pcm-map"
+version = "0.1.0"
+description = "Differentiable 2D enthalpy-porosity + Boussinesq topology optimization for dual-cycle LHTES"
+requires-python = ">=3.10"
+dependencies = [
+  "jax>=0.4.30",
+  "numpy>=1.26",
+  "matplotlib>=3.8",
+  "optax>=0.2.3",
+]
+
+[project.scripts]
+pcm = "pcm.__main__:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.uv]
+package = true
+
+[tool.setuptools.packages.find]
+include = ["pcm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
